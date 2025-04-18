@@ -27,7 +27,9 @@
 
 // 3) შექმენით ფუნცქცია რომელიც დააბრუნებს ბოლო ორი ყველაზე პარატა რიცხვის ჯამს: e.g:[19, 5, 42, 2, 77] => 7
 
-// const nums = [19, 5, 42, 2, 77];
+const nums = [19, 5, 42, 2, 77];
+
+//1
 
 // function Sum(nums) {
 //   let smallest = Math.min(...nums);
@@ -37,6 +39,17 @@
 // }
 
 // Sum(nums);
+
+//2
+
+function Sum(nums) {
+  nums.sort(function (a, b) {
+    return a - b;
+  });
+  console.log(nums[0] + nums[1], "sum of smallest ones");
+}
+
+Sum(nums);
 
 // 4)შექმენით ფუნცქია სადაც შეადარებთ ამ ორ მასივს ერთმანეთს და დააბრუნეთ ახალ მასივს ყველაზე დიდი რიცხვებით:
 // getLargerNumbers(arr1, arr2); // Returns [23, 64, 53, 17, 88]
